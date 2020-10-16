@@ -1,38 +1,176 @@
-.App {
-  text-align: center;
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Fjalla+One&family=Poppins:wght@300&display=swap');
+
+.background {
+    text-align: center;
+    background-color: #f6ede6;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    font-size: calc(10px + 2vmin);
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.welcome {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    background:  url('./images/v875-katie-26.jpg'); 
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.row {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.title {
+  font-family:'Bebas Neue', cursive !important;
+  font-size: 48px  !important;
+  color: #23286b !important;
+}
+
+.update{
+  font-family: 'Poppins', sans-serif, !important;
+  font-style: italic;
+  font-size: 24px !important;
+  color: #23286b !important;
+}
+
+.image {
+  width: 370px;
+  margin-top: 5px;
+}
+
+.containerInfo {
+  margin: 30px 0;
+  width: 100%;
+}
+
+.countryName {
+  font-family: 'Poppins', sans-serif !important;
+
+}
+
+.linkButton{
+  font-family: 'Poppins', sans-serif !important;
+  color: #304282;
+  font-weight:bold;
+}
+
+.card {
+  margin: 2% 1% !important;
+  background: #f6ede8  !important;
+  border-radius: 20px !important;
+  min-height: 145px !important;
   display: flex;
   flex-direction: column;
-  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.card:hover {
+  transform: translateY(-1px) scale(1.1) !important;
+  transition: all 1s ease !important;
+  cursor: pointer;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.cases{
+  font-family: 'Poppins', sans-serif !important;
+  font-size: 24px !important;
+  color: #304282 !important;
+  font-weight:bold !important;
+}
+
+.infected {
+color: rgb(37,33,52) !important;
+}
+
+.recovered {
+  color: rgb(248,177,220) !important;
+}
+
+.deaths {
+  color:rgb(226,139,100) !important;
+}
+
+.selectCountry {
+  width: 50%;
+  margin-bottom: 30px !important;
+  margin-top: 30px !important;
+  display: flex !important;
+  align-self: flex-start !important;
+  margin-left: 1% !important;
+}
+
+
+.countryName {
+  font-family: 'Poppins', sans-serif !important;
+  font-size: 18px !important;
+
+}
+
+.chartContainer {
+  display: flex;
+  justify-content: center;
+  width: 55%;
+  height: 35%;
+  margin: 2%;
+  background-color:#f6ede8;
+
+}
+
+@media (max-width: 1000px) {
+  .card {
+      margin: 2% 4% !important;
+      min-height: 105px !important;
   }
-  to {
-    transform: rotate(360deg);
+
+   .cases {
+      font-size: 18px !important;
+  }
+
+  .infected, .recovered, .deaths {
+      font-size: 16px !important;
+  }
+  
+}
+
+@media (max-width: 850px) {
+  .card {
+      margin: 2% 8% !important;
+  }
+}
+
+@media (max-width: 770px) {
+
+.chartContainer {
+  width: 100%;
+}
+
+.image {
+  width: 80%;
+}
+
+.title {
+  font-size: 28px  !important;
+}
+
+.update{
+  font-size: 20px !important;
+}
+}
+
+@media (max-width: 600px) {
+  .card {
+      margin: 2% 10% !important;
   }
 }
